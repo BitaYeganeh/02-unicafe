@@ -1,49 +1,51 @@
 import { useState } from 'react'
+import './App.css'
 
 const App = () => {
-  // save clicks of each button to its own state
   const [good, setGood] = useState(0)
   const [neutral, setNeutral] = useState(0)
   const [bad, setBad] = useState(0)
 
-
-
- // calculate total feedback
   const total = good + neutral + bad
-  
-
 
   return (
-    <div>
-      <h1>Give Feedback:</h1>
-      <button onClick={() => setGood(good + 1)}>Good</button>
-      <button onClick={() => setNeutral(neutral + 1)}>Neutral</button>
-      <button onClick={() => setBad(bad + 1)}>Bad</button>
+    <div className="container">
+      <h1 className="heading">Give Feedback:</h1>
+      <button className="button-good" onClick={() => setGood(good + 1)}>Good</button>
+      <button className="button-neutral" onClick={() => setNeutral(neutral + 1)}>Neutral</button>
+      <button className="button-bad" onClick={() => setBad(bad + 1)}>Bad</button>
 
-      <h2>Statistics:</h2>
+      <h2 className="heading" style={{marginTop: '32px'}}>Statistics:</h2>
       {total === 0 ? (
-        <p>No feedback given</p>
+        <p style={{color: '#888'}}>No feedback given</p>
       ) : (
-        <table>
+        <table className="table">
           <tbody>
-            <tr>
-              <td>Good:</td>
-              <td>{good}</td>
+            <tr className="tr">
+              <td className="td-good">Good:</td>
+              <td className="td-good-value">{good}</td>
+            </tr>
+            <tr className="tr">
+              <td className="td-neutral">Neutral:</td>
+              <td className="td-neutral-value">{neutral}</td>
+            </tr>
+            <tr className="tr">
+              <td className="td-bad">Bad:</td>
+              <td className="td-bad-value">{bad}</td>
+            </tr>
+            <tr className="tr">
+              <td className="td-summary">Total:</td>
+              <td className="td-summary-value">{total}</td>
+            </tr>
+            <tr className="tr">
+              <td className="td-summary">Average:</td>
+              <td className="td-summary-value">{((good - bad) / total).toFixed(2)}</td>
             </tr>
             <tr>
-              <td>Neutral:</td>
-              <td>{neutral}</td>
+              <td className="td-summary">Positive Feedback:</td>
+              <td className="td-summary-value">{((good / total) * 100).toFixed(2)}%</td>
             </tr>
-            <tr>
-              <td>Bad:</td>
-              <td>{bad}</td>
-            </tr>
-            <tr>
-              <td>Total:</td>
-              <td>{total}</td>
-            </tr>
-            
-       </tbody>
+          </tbody>
         </table>
       )}
     </div>
