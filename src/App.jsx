@@ -5,6 +5,7 @@ const Statistics = ({ good, neutral, bad }) => {
   const total = good + neutral + bad
 
   if (total === 0) {
+    //1.9: unicafe step 4:
     return <p style={{color: '#888'}}>No feedback given</p>
   }
 
