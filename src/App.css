@@ -2,7 +2,7 @@
   max-width: 400px;
   margin: 40px auto;
   padding: 24px;
-  background: #f8f1f1ff;
+  background: rgb(146, 171, 174);
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
@@ -10,6 +10,8 @@
 .heading {
   color: #101aaaff;
   margin-bottom: 16px;
+  text-align: center;
+
 }
 .heading-statistics {
   margin-top: 32px;
@@ -48,18 +50,24 @@
   font-weight: bold;
 }
 
+.button-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 24px 0;
+}
+
 .table {
   width: 100%;
   margin-top: 16px;
   border-collapse: collapse;
   background: #fff;
-  border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 1px 4px rgba(0,0,0,0.06);
 }
 
 .tr {
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #e61616;
 }
 
 .td-label {
@@ -72,7 +80,6 @@
   font-weight: bold;
   padding: 10px 12px;
   color: #27ae60;
-  background: #eafaf1;
   text-align: left;
 }
 

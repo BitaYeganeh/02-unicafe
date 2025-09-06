@@ -34,10 +34,12 @@ const App = () => {
 
   return (
     <div className="container">
-      <h1 className="heading">Give Feedback:</h1>
-      <Button className="button-good" onClick={() => setGood(good + 1)}>Good</Button>
-      <Button className="button-neutral" onClick={() => setNeutral(neutral + 1)}>Neutral</Button>
-      <Button className="button-bad" onClick={() => setBad(bad + 1)}>Bad</Button>
+      <h1 className="heading">Give Feedback for the Uni-Cafe:</h1>
+      <div className="button-group">
+        <Button className="button-good" onClick={() => setGood(good + 1)}>Good</Button>
+        <Button className="button-neutral" onClick={() => setNeutral(neutral + 1)}>Neutral</Button>
+        <Button className="button-bad" onClick={() => setBad(bad + 1)}>Bad</Button>
+      </div>
 
       <h2 className="heading heading-statistics" style={{marginTop: '32px'}}>Statistics:</h2>
    
