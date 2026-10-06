@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import Button from './components/Button'
-import StatisticLine from './components/Statisticline'
+import StatisticLine from './components/StatisticLine'
 
 // Statistics component to display feedback statistics
 const Statistics = ({ good, neutral, bad }) => {
